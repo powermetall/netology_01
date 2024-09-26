@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mt-maps
+  namespace: nginx-space
+data:
+  HTTP_PORT: '1212'
+  index.html: |
+    <html>
+    <b>Hello World!</b>
+    </br>
+    <h1>Hello from configmap! </h1>
+    </html>

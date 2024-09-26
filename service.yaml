@@ -1,0 +1,18 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-mt-svc
+  namespace: nginx-space
+spec:
+  selector:
+    app: ng-mt
+  ports:
+    - protocol: TCP
+      name: nginx
+      port: 80
+      targetPort: 80
+    - protocol: TCP
+      name: multitool
+      port: 8080
+      targetPort: 1212
